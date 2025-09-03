@@ -1,0 +1,36 @@
+{
+  "name": "docker-example",
+  "version": "1.0.0",
+  "description": "This repository is an example that can be cloned, modified and applied to other projects.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --env-file=.env src/index.js",
+    "start": "node --env-file=.env src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-Paes/docker-example.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "devcontainer",
+    "dockerfile",
+    "node",
+    "javascript"
+  ],
+  "author": "Gabriel-Paes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gabriel-Paes/docker-example/issues"
+  },
+  "homepage": "https://github.com/Gabriel-Paes/docker-example#readme",
+  "dependencies": {
+    "env-var": "^7.5.0",
+    "fastify": "^5.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
