@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: docker-example-node
+    env_file: .env
+    ports:
+      - "${PORT}:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+    command: npm run dev
+
+  mongo:
+    image: mongo:8
+    container_name: docker-example-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+
+networks:
+  app-network:
