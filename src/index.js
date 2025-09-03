@@ -5,8 +5,8 @@ const fastify = Fastify({ logger: true });
 
 const PORT = env.get("PORT").default(3000).asInt();
 
-fastify.get("/", async (request, replay) => {
-  replay.send({ message: "OK" });
+fastify.get("/", async (request, reply) => {
+  reply.send({ message: "OK" });
 });
 
 fastify
